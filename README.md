@@ -31,7 +31,7 @@ This bash script performs comprehensive data collection from a Kubernetes cluste
 ### Basic Execution
 
 ```bash
-./k8s-data-collection.sh
+./collect-data.sh
 ```
 
 ### With Custom Namespace (Prompt)
@@ -40,12 +40,6 @@ The script will prompt you to enter a namespace. Press Enter to use the default 
 
 ```
 Enter namespace (default: default): 
-```
-
-### With Custom Namespace (Argument)
-
-```bash
-./k8s-data-collection.sh production
 ```
 
 ## Directory Structure
@@ -226,14 +220,14 @@ which kubectl
 ### Basic Collection with Default Namespace
 
 ```bash
-./k8s-data-collection.sh
+./collect-data.sh
 # When prompted, press Enter to use 'default' namespace
 ```
 
 ### Collection for Production Namespace
 
 ```bash
-./k8s-data-collection.sh production
+./collect-data.sh production
 ```
 
 ### Collection with Custom Extensions
@@ -241,14 +235,14 @@ which kubectl
 Edit the custom commands section and add your requirements, then run:
 
 ```bash
-./k8s-data-collection.sh
+./collect-data.sh
 ```
 
 ### Archive Only (Keep Compressed File, Remove Directory)
 
 ```bash
 # Run script as normal—it will compress and remove the directory by default
-./k8s-data-collection.sh
+./collect-data.sh
 ```
 
 ### Keep Both Archive and Directory
@@ -256,7 +250,7 @@ Edit the custom commands section and add your requirements, then run:
 Comment out the `rm -rf ${OUTPUT_DIR}` line, then run:
 
 ```bash
-./k8s-data-collection.sh
+./collect-data.sh
 ```
 
 ## Support and Contributions
@@ -270,5 +264,5 @@ For issues, enhancements, or custom requirements:
 ---
 
 **Script Version**: 1.0  
-**Last Updated**: 2026  
-**Maintainer**: DevOps/Platform Team
+**Last Updated**: 04/01/2026  
+**Maintainer**: Sabeer Muhaiadeen N
